@@ -13,7 +13,7 @@
 	
 	<!-- Constructor injection -->
 	<bean id="myCoach"
-			class="com.ikiugu.springdemo.TrackCoach">
+			class="com.ikiugu.springdemo.TrackCoach" scope="prototype">
 			<constructor-arg ref="myFortuneService"/>
 	</bean>
 
