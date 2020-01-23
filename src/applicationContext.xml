@@ -19,6 +19,8 @@
 	<bean id="myCricketCoach"
 			class="com.ikiugu.springdemo.CricketCoach">
 			<property name="fortuneService" ref="myFortune"/>
+			<property name="emailAddress" value="testemail@gmail.com"/>
+			<property name="team" value="some amazing team"/>
 	</bean>
 	
 	<bean id="myLoggerConfig" class="com.ikiugu.springdemo.MyLoggerConfig" init-method="initLogger">
