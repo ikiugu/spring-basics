@@ -11,9 +11,14 @@
 			class="com.ikiugu.springdemo.HappyFortuneService">
 	</bean>
 	
-	<bean id="myCoach"
+	<!-- <bean id="myCoach"
 			class="com.ikiugu.springdemo.TrackCoach">
 			<constructor-arg ref="myFortune"/>
+	</bean> -->
+	
+	<bean id="myCricketCoach"
+			class="com.ikiugu.springdemo.CricketCoach">
+			<property name="fortuneService" ref="myFortune"/>
 	</bean>
 	
 	<bean id="myLoggerConfig" class="com.ikiugu.springdemo.MyLoggerConfig" init-method="initLogger">
