@@ -1,6 +1,12 @@
 package com.ikiugu.springdemo;
 
 public class SwimmingCoach implements Coach {
+	
+	private DarkFortuneService darkFortuneService;
+	
+	public SwimmingCoach(DarkFortuneService darkFortuneService) {
+		this.darkFortuneService = darkFortuneService;
+	}
 
 	@Override
 	public String getDailyWorkout() {
@@ -9,7 +15,7 @@ public class SwimmingCoach implements Coach {
 
 	@Override
 	public String getDailyFortune() {
-		return null;
+		return darkFortuneService.getFortune();
 	}
 
 }
