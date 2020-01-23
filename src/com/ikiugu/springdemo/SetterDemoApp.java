@@ -14,6 +14,10 @@ public class SetterDemoApp {
 		
 		// call methods on the bean
 		 System.out.println(theCoach.getDailyFortune());
+		 
+		 // test for literal injection
+		 System.out.println(theCoach.getTeam());
+		 System.out.println(theCoach.getEmailAddress());
 		
 		// close context
 		appContext.close();
