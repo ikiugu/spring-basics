@@ -1,5 +1,7 @@
 package com.ikiugu.springdemo;
 
+import java.util.Random;
+
 public class DarkFortuneService implements FortuneService {
 
 	private String[] fortunes = 
@@ -10,10 +12,12 @@ public class DarkFortuneService implements FortuneService {
 				"You will end in tears"
 				};
 	
+	private Random randomNumber = new Random();
+	
 	@Override
 	public String getFortune() {
 		
-		int num = (int) Math.floor((Math.random() * fortunes.length));
+		int num = randomNumber.nextInt(fortunes.length);
 		
 		
 		return fortunes[num];
